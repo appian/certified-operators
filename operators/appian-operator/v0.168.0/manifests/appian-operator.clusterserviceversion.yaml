@@ -205,6 +205,8 @@ spec:
                   app.kubernetes.io/name: appian-operator
               spec:
                 affinity: {}
+                imagePullSecrets:
+                - name: appian-regcred
                 containers:
                   - args:
                       - --zap-encoder=json
